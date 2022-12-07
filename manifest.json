@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Phase2 Myteam pingboard Enancements",
+    "version": "1.0.0",
+    "content_scripts": [{
+        "matches": ["https://phase2.pingboard.com/*"],
+        "js": ["content.js"],
+        "css": ["content.css"]
+      }],
+    "permissions": [
+      "activeTab"
+    ]
+  }
+  

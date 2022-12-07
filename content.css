@@ -1,0 +1,19 @@
+.p2Wrapper {
+    width: 100%;
+    flex-wrap: wrap;
+    display:flex;
+}
+.p2Range {
+    width:100%;
+    background:blue;
+}
+.p2Range::-webkit-slider-runnable-track, .p2Range::-moz-range-track, .p2Range::-ms-track {
+    background-color: blue;
+}
+.p2Pre {
+    width:50%;
+}
+.p2Post {
+    width: 50%;
+    text-align: end;
+}
