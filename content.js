@@ -63,6 +63,11 @@ const reponses = {
   'I so not flex very often': {...workday, value:4},
   'You can set your clock by me': {...workday, value:5},
 }
+document.querySelectorAll('.profile-section__field').forEach((e) => {
+  if (e.textContent.match(/(My super|My blind|I want to do)/)) {
+    e.setAttribute('style', 'width:50%');
+  }
+})
 document.querySelectorAll('a').forEach(function(input) {
   if (props = reponses[input.innerText]) {
     const wrapper = slider({...props, text:input.innerText});

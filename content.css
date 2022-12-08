@@ -17,3 +17,10 @@
     width: 50%;
     text-align: end;
 }
+.profile-section__content {
+    display:flex;
+    flex-wrap: wrap;
+}
+.profile-section__field {
+    width:100%;
+}
