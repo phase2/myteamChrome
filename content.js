@@ -8,9 +8,20 @@ const slider = ({pre, post, value, text}) => {
   const range = document.createElement('input');
   const preE = document.createElement('span');
   const postE = document.createElement('span');
+  const midE = document.createElement('span');
   const wrapper = document.createElement('div');
   preE.innerText = pre;
   postE.innerText = post;
+  if (value >1 && value < 5) {
+  midE.innerText = text;
+  }
+  const midClasses = {
+    1: '',
+    2: 'p2MidLeft',
+    3: 'p2MidCenter',
+    4: 'p2MidRight',
+    5: ''
+  }
   range.setAttribute('min', 1);
   range.setAttribute('max', 5);
   range.setAttribute('step', 1);
@@ -19,11 +30,13 @@ const slider = ({pre, post, value, text}) => {
   range.setAttribute('type', 'range');
   range.setAttribute('title', text);
   range.setAttribute('class', 'p2Range');
-  preE.setAttribute('class', 'p2Pre');
-  postE.setAttribute('class', 'p2Post');
+  preE.setAttribute('class', 'p2Pre ' + (value!==1 ? 'p2PreNotSelected' : ''));
+  postE.setAttribute('class', 'p2Post ' + (value!==5 ? 'p2PreNotSelected' : ''));
+  midE.setAttribute('class', 'p2Mid ' + midClasses[value]);
   wrapper.setAttribute('class', 'p2Wrapper');
   wrapper.appendChild(range);
   wrapper.appendChild(preE);
+  wrapper.appendChild(midE);
   wrapper.appendChild(postE); 
   return wrapper;
 }

@@ -5,16 +5,41 @@
 }
 .p2Range {
     width:100%;
-    background:blue;
+    height: 2px;
+    -webkit-appearance: none;
+    background: gray;
+    border: 1px gray;
+    margin: 10px 0px;
 }
 .p2Range::-webkit-slider-runnable-track, .p2Range::-moz-range-track, .p2Range::-ms-track {
-    background-color: blue;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ff4500;
+    cursor: ew-resize;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}
+.p2PreNotSelected {
+    color: #aaa;
 }
 .p2Pre {
-    width:50%;
+    width:20%;
+}
+.p2Mid {
+    width:60%;
+}
+.p2MidLeft {
+}
+.p2MidCenter {
+  text-align: center;
+}
+.p2MidRight {
+  text-align: end;
 }
 .p2Post {
-    width: 50%;
+    width: 20%;
     text-align: end;
 }
 .profile-section__content {
